@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Planning Cycle 2027</title>
+<meta name="description" content="Dashboard Planning Cycle Target 2027 · PT Daya Adicipta Sandika & PT Daya Adicipta Wihaya: target, realita pasar, timeline, dan KPI Mandatory.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23b8155f'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='14' fill='white' text-anchor='middle'%3E27%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Planning Cycle 2027 · landing page statis (versi publik dari index.php)
+   Data diubah di blok <script> paling bawah: CONTENT dan TIMELINE. */
+:root{
+  --bg:#f3f4f7; --surface:#ffffff; --ink:#151a26; --muted:#5b6274; --line:#dde0e7;
+  --accent:#b8155f; --accent-soft:#f7e3ed; --toyota:#1f4fa8; --daihatsu:#0f7a6a;
+  --bad:#b3261e; --chip:#eef0f4;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#10131b; --surface:#181c27; --ink:#e9ecf3; --muted:#9aa2b5; --line:#2a3040;
+  --accent:#f0619e; --accent-soft:#3a1a2a; --toyota:#7ea6ef; --daihatsu:#4cc2ad;
+  --bad:#ff8a80; --chip:#232838; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10131b; --surface:#181c27; --ink:#e9ecf3; --muted:#9aa2b5; --line:#2a3040;
+  --accent:#f0619e; --accent-soft:#3a1a2a; --toyota:#7ea6ef; --daihatsu:#4cc2ad;
+  --bad:#ff8a80; --chip:#232838; color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:64px}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--body);margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px}
+@media (max-width:600px){.wrap{padding-inline:16px}}
+main.wrap{padding-block:8px 48px}
+h1,h2,h3{font-family:var(--display);letter-spacing:.01em;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:800;line-height:.95;text-transform:uppercase}
+h2{font-size:2rem;font-weight:700;line-height:1.05}
+h3{font-size:1.25rem;font-weight:600}
+p{margin:0}
+.hl{color:var(--accent)}
+.eyebrow{font:500 .75rem/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)} .small{font-size:.8rem} .nowrap{white-space:nowrap}
+.num{font-variant-numeric:tabular-nums} .mono{font-family:var(--mono);font-size:.8rem}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* agenda terdekat */
+.agendabar{background:var(--ink);color:var(--bg);font-size:.84rem}
+.agendabar .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;padding-block:8px}
+.ab-h{font:700 .78rem var(--mono);padding:3px 9px;border-radius:99px;background:color-mix(in srgb,var(--bg) 18%,transparent);white-space:nowrap}
+.ab-h.soon{background:var(--accent);color:#fff}
+.ab-t{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline;min-width:0}
+.ab-l{font:500 .68rem var(--mono);letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+.ab-on .dim{opacity:.7}
+.ab-cal{margin-left:auto;color:inherit;font-size:.8rem;white-space:nowrap}
+@media (max-width:600px){.ab-on{display:none}.ab-l{display:none}}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;gap:4px;align-items:center;padding-block:10px;overflow-x:auto}
+.nav b{font-family:var(--display);font-size:1.15rem;margin-right:12px;white-space:nowrap}
+.nav a{white-space:nowrap;text-decoration:none;color:var(--muted);font-size:.88rem;padding:6px 10px;border-radius:6px}
+.nav a:hover{background:var(--chip);color:var(--ink)}
+.nav .spacer{flex:1}
+.themebtn{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:6px;padding:5px 9px;font:500 .76rem var(--mono);cursor:pointer;white-space:nowrap}
+.themebtn:hover{color:var(--ink)}
+
+section{padding-block:40px 4px}
+.sec-head{display:grid;gap:8px;margin-bottom:20px;max-width:72ch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px}
+.foot{padding-block:20px 32px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted);display:grid;gap:4px}
+
+/* hero */
+.hero{padding-block:36px 8px;display:grid;gap:22px}
+.themes{display:flex;flex-wrap:wrap;gap:10px}
+.theme{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:10px 14px;display:grid;gap:2px;min-width:0}
+.theme small{font:500 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.theme strong{font-family:var(--display);font-size:1.25rem;font-weight:600}
+.theme.count{border-color:var(--accent);background:var(--accent-soft)}
+.theme.count strong{color:var(--accent);font-size:1.6rem;line-height:1}
+.jump{display:flex;flex-wrap:wrap;gap:8px}
+
+/* leader */
+.leader{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:860px){.leader{grid-template-columns:1fr}}
+.soonlist{list-style:none;margin:0;padding:0;display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.soonlist li{background:var(--surface);padding:12px 14px;display:grid;grid-template-columns:76px minmax(0,1fr);gap:12px;align-items:center}
+.soonlist li.key{box-shadow:inset 3px 0 0 var(--accent)}
+.soonlist li.none{display:block}
+.soonlist li>span:last-child{display:grid;gap:2px}
+.soonlist .h{font:700 .8rem var(--mono);text-align:center;padding:4px 0;border-radius:6px;background:var(--chip);color:var(--muted)}
+.soonlist .h.soon{background:var(--accent-soft);color:var(--accent)}
+.calbox{display:grid;gap:10px}
+.calbox .btn{text-align:center;white-space:normal}
+.btn{display:inline-block;text-decoration:none;border:0;border-radius:6px;padding:10px 16px;font:600 .9rem var(--body);cursor:pointer;background:var(--ink);color:var(--bg);white-space:nowrap}
+.btn.accent{background:var(--accent);color:#fff}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.btn.sm{font-size:.8rem;padding:6px 11px;font-weight:500}
+
+/* targets */
+.targets{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.tcard{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;display:grid;gap:12px;min-width:0;align-content:start}
+.tcard .brand{font:600 .78rem var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.tcard.ty .brand,.tcard.ty .tgt{color:var(--toyota)} .tcard.dh .brand,.tcard.dh .tgt{color:var(--daihatsu)}
+.gauge{width:100%;max-width:300px;height:auto}
+svg text{fill:var(--muted);font:11px var(--mono)}
+svg .lbl{fill:var(--ink);font-weight:500}
+.tline{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.tline div{display:grid}
+.tline .v{font:700 2rem/1 var(--display)}
+.tline .l{font-size:.78rem;color:var(--muted)}
+.big-claim{font:700 1.7rem/1.1 var(--display)}
+.note{font-size:.84rem;color:var(--muted)}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:18px}
+.pillar{padding-top:14px;border-top:3px solid var(--ink);display:grid;gap:6px;align-content:start}
+
+/* market */
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:16px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:grid;gap:10px;min-width:0}
+.panel svg{width:100%;height:auto}
+.src{font:400 .72rem var(--mono);color:var(--muted);margin-top:6px}
+.macro{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:16px}
+.macro div{background:var(--surface);padding:12px 14px;display:grid;gap:2px}
+.macro b{font:700 1.5rem/1 var(--display)}
+.macro span{font-size:.75rem;color:var(--muted)}
+
+/* tables */
+.tablewrap{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow-x:auto}
+table{border-collapse:collapse;width:100%}
+th,td{padding:8px 12px;border-bottom:1px solid var(--line);text-align:left;font-size:.86rem;vertical-align:middle}
+th{font:500 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+tbody tr:last-child td{border-bottom:0}
+table.data{min-width:640px}
+table.tl{min-width:760px}
+.fn{font:600 .72rem var(--mono);color:var(--accent);white-space:nowrap}
+.tl .grp td{background:var(--chip);font:600 .72rem var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.bar-cell{width:44%}
+.track{position:relative;height:18px}
+.track .bar{position:absolute;top:3px;height:12px;border-radius:3px;background:var(--ink)}
+.track .bar.done{background:var(--muted);opacity:.55}
+.track .bar.key{background:var(--accent)}
+.track .today{position:absolute;top:-8px;bottom:-8px;width:2px;background:var(--accent)}
+.months{display:flex;justify-content:space-between}
+.state{font:500 .68rem var(--mono);padding:2px 7px;border-radius:99px;white-space:nowrap;background:var(--chip);color:var(--muted)}
+.state.now{background:var(--accent-soft);color:var(--accent)}
+
+/* cascade */
+.cascade{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--line)}
+.cstep{background:var(--surface);padding:16px;display:grid;gap:6px}
+.cstep .f{font:500 .7rem var(--mono);color:var(--accent);letter-spacing:.08em}
+.cstep .who{font-size:.8rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="agendabar" id="agendabar" role="region" aria-label="Agenda terdekat" hidden><div class="wrap" id="agendabar-in"></div></div>
+
+<nav class="nav" aria-label="Navigasi bagian"><div class="wrap">
+  <b>PC 2027</b>
+  <a href="#leader">Agenda</a>
+  <a href="#target">Target</a>
+  <a href="#pasar">Pasar</a>
+  <a href="#timeline">Timeline</a>
+  <a href="#kpi">KPI</a>
+  <span class="spacer"></span>
+  <button class="themebtn" id="themebtn" type="button" aria-label="Ganti tema terang/gelap">Tema</button>
+</div></nav>
+
+<main class="wrap">
+<header class="hero">
+  <p class="eyebrow">PT Daya Adicipta Sandika · PT Daya Adicipta Wihaya · Planning Cycle Target 2027</p>
+  <h1>Evolving Together<br><span class="hl">Toward Greatness</span></h1>
+  <div class="themes">
+    <div class="theme"><small>Tema Daya Group 2027</small><strong>Evolving Together Toward Greatness</strong></div>
+    <div class="theme"><small>Shareholder Message Triputra 2027</small><strong>Agile Execution, Resilient Foundation</strong></div>
+    <div class="theme count"><small id="ev-label">Planning Cycle Event</small><strong class="num" id="ev-count">–</strong></div>
+  </div>
+</header>
+
+<section id="leader">
+  <div class="sec-head"><p class="eyebrow">Untuk leader · jangan sampai terlewat</p><h2>Agenda 14 hari ke depan</h2>
+    <p class="muted">Simpan jadwal ke kalender Anda sekali saja, lengkap dengan pengingat otomatis.</p></div>
+  <div class="leader">
+    <ol class="soonlist" id="soonlist"></ol>
+    <div class="card calbox">
+      <h3>Masukkan ke kalender</h3>
+      <button class="btn accent" id="ics" type="button">Unduh kalender (.ics)</button>
+      <a class="btn ghost" id="wa" href="#" target="_blank" rel="noopener">Bagikan agenda ke WhatsApp</a>
+      <p class="note">Buka file .ics di Outlook, Google Calendar (<em>Settings → Import</em>), atau iPhone.
+        Setiap agenda membawa pengingat H-1; agenda kunci (presentasi &amp; Planning Cycle Event) juga H-3.</p>
+    </div>
+  </div>
+</section>
+
+<section id="target">
+  <div class="sec-head"><p class="eyebrow">Target sales contribution 2027 · President Letter Daya Group</p><h2>Dua angka yang harus dipegang setiap orang</h2></div>
+  <div class="targets" id="targets">
+    <article class="tcard">
+      <span class="brand" style="color:var(--accent)">Guidance Master Budget 2027 · Corp FA</span>
+      <p class="big-claim">TPAT MB 2027 &gt; TPAT Outlook 2026</p>
+      <p class="note">Pertumbuhan revenue wajib didukung volume, harga, mix &amp; inisiatif bisnis; perbaikan profit wajib terkait margin, efisiensi biaya, cash generation &amp; return.</p>
+      <p class="note"><strong>Arahan roda empat:</strong> strategi penjualan efektif, selektif menentukan target konsumen, optimalisasi fleet, produktivitas &amp; efisiensi proses kerja.</p>
+    </article>
+  </div>
+  <div class="pillars">
+    <div class="pillar"><h3>1 · Visi &amp; Mindset</h3><p class="muted">Jangan berpuas diri. Perluas wawasan dan lakukan benchmarking.</p></div>
+    <div class="pillar"><h3>2 · Proses Bisnis</h3><p class="muted">PDCA &amp; SDCA konsisten, genba, teknologi sebagai enabler operational excellence.</p></div>
+    <div class="pillar"><h3>3 · People &amp; Organisasi</h3><p class="muted">Upskilling &amp; reskilling, people benchstrength, ruang untuk talenta muda.</p></div>
+    <div class="pillar"><h3>Fondasi · Governance</h3><p class="muted">Risk management, internal control, anti-fraud. Alignment dan autonomy.</p></div>
+  </div>
+</section>
+
+<section id="pasar">
+  <div class="sec-head"><p class="eyebrow">Realita pasar · Executive Briefing Triputra, 9 Sep 2026</p><h2>Pasar tumbuh tidak merata, daya beli tergerus</h2>
+    <p class="muted">Pertumbuhan pasar mobil 2027 diperkirakan berlanjut, tetapi banyak didorong segmen kendaraan listrik, sementara basis pembeli kelas menengah menyusut.</p></div>
+  <div class="mgrid">
+    <div class="panel"><h3>Penjualan mobil penumpang 2026, % YoY</h3><div id="chart-sales"></div>
+      <p class="note">Anjlok −19,2% di Maret, melonjak di April–Juli. Rencana bulanan harus siap menghadapi ayunan ini.</p>
+      <p class="src">Sumber: Big Data BCA, Gaikindo (materi D. Sumual, BCA)</p></div>
+    <div class="panel"><h3>Porsi kelas menengah Indonesia</h3><div id="chart-mc"></div>
+      <p class="note">Dari 61,0 juta orang (2018) menjadi 47,2 juta (2025).</p>
+      <p class="src">Sumber: BPS, BCA Economic Research</p></div>
+  </div>
+  <div class="macro" id="macro"></div>
+  <p class="src">Asumsi makro: Key Budget Guidance 2027 (Triputra Group, World Bank &amp; Bank Mandiri). IKK: Big Data BCA.</p>
+</section>
+
+<section id="timeline">
+  <div class="sec-head"><p class="eyebrow">Timeline Planning Cycle Target 2027</p><h2>Dari arahan holding sampai Planning Cycle Event</h2>
+    <p class="muted">Tanggal bertanda <em>dok</em> terkonfirmasi di dokumen; sisanya draft yang dikelola tim MI.</p></div>
+  <div class="tablewrap"><table class="tl">
+    <thead><tr><th>Kegiatan</th><th>Tanggal</th><th>Status</th><th class="bar-cell"><div class="months"><span>Sep</span><span>Okt</span><span>Nov</span><span>Des</span></div></th></tr></thead>
+    <tbody id="tl-body"></tbody>
+  </table></div>
+</section>
+
+<section id="kpi">
+  <div class="sec-head"><p class="eyebrow">Cascade KPI · Balanced Scorecard</p><h2>Setiap AP harus bisa ditelusuri sampai target perusahaan</h2></div>
+  <div class="cascade">
+    <div class="cstep"><span class="f">FORM 10</span><h3>OYP Company</h3><span class="who">Strategic objective &amp; KPI company · CEO</span></div>
+    <div class="cstep"><span class="f">FORM 11</span><h3>OYP Division</h3><span class="who">KPI from company → KPI division</span></div>
+    <div class="cstep"><span class="f">FORM 12</span><h3>AP Dept Head</h3><span class="who">KPI from division → KPI dept + activity plan</span></div>
+    <div class="cstep"><span class="f">FORM 13</span><h3>AP Sub Dept / SPV</h3><span class="who">KPI from dept → KPI sub dept + activity plan</span></div>
+  </div>
+  <div class="sec-head" style="margin-top:28px"><h3>KPI Mandatory 2027 dari Corporate Daya Group untuk DAS &amp; DAWi</h3>
+    <p class="muted">Wajib masuk ke OYP atau AP fungsi pemiliknya.</p></div>
+  <div class="tablewrap"><table class="data">
+    <thead><tr><th>Fungsi</th><th>KPI</th><th>DAS</th><th>DAWi</th><th>Due</th></tr></thead>
+    <tbody id="kpi-body"></tbody>
+  </table></div>
+  <p class="src">Sumber: Materi Executive Briefing Daya Group, 28 Sep 2026.</p>
+</section>
+</main>
+
+<footer class="wrap foot">
+  <span>Planning Cycle Target 2027 · PT Daya Adicipta Sandika &amp; PT Daya Adicipta Wihaya · dikelola oleh Management Improvement / M-Dev</span>
+  <span class="mono">Status agenda dihitung otomatis dari tanggal hari ini (WIB).</span>
+</footer>
+
+<script>
+/* =================== DATA (ubah di sini bila ada revisi) =================== */
+var EVENT_DATE = '2026-11-13';
+var CONTENT = {
+  targets: [
+    {brand:'Daya Toyota · PT Daya Adicipta Sandika', cls:'ty', outlook:10.0, target:11.0, gap:'+1,00', area:'Jakarta Timur & Bekasi', branches:'DTC, DTB'},
+    {brand:'Daya Daihatsu · PT Daya Adicipta Wihaya', cls:'dh', outlook:8.66, target:9.0, gap:'+0,34', area:'Jakarta & Sumatera Utara', branches:'DDG, DDM, DDL'}
+  ],
+  carSalesYoy: [['Jan',5.1],['Feb',5.5],['Mar',-19.2],['Apr',41.6],['Mei',9.7],['Jun',27.2],['Jul',23.0]],
+  middleClass: [[2016,20.5],[2017,22.4],[2018,23.1],[2019,22.2],[2020,21.4],[2021,20.5],[2022,18.7],[2023,18.1],[2024,17.1],[2025,16.6]],
+  macro: [
+    ['117','Indeks Keyakinan Konsumen Jul 2026 (Jan: 127)'],
+    ['5,3%','Proyeksi PDB Indonesia 2027'],
+    ['3,25%','Inflasi 2027'],
+    ['5,75%','BI 7-Day RR Rate 2027'],
+    ['Rp18.000','Kurs USD 2027'],
+    ['70–80','Harga minyak ICP (USD/barel)']
+  ],
+  kpiMandatory: [
+    ['MDev','% Employee Involvement dalam improvement','95,40%','83,74%','Des'],
+    ['MDev','# Improvement project level Gold','33','16','Des'],
+    ['MDev','# Innovation project closed (TEKS, QCP, Design Thinking)','1 TEKS · 3 QCP · 2 DT','1 TEKS · 1 QCP · 1 DT','TEKS Jun; DT & QCP 50% Jun, 100% Des'],
+    ['FA','Financial Reporting & Governance Excellence','100%','100%','Jan–Des'],
+    ['FA','Financial Management & Business Performance Effectiveness','100%','100%','Jan–Des'],
+    ['FA','FA Capability Development & Knowledge Sharing','100%','100%','Jan–Des'],
+    ['Legal','Regulation Mapping and Review','11','11','Mar, Jun, Sep, Des'],
+    ['Legal','Anti-Fraud Campaign','100%','100%','Mar, Jun, Sep'],
+    ['Tax','Tax Risk Assessment (Midnight Sun Report) FY 2026','1','1','Okt 2027'],
+    ['Tax','Reconciled Related Party Transactions','100%','100%','Jan–Des'],
+    ['Tax','CIT Projection Q4-2026 s.d. Q3-2027','tgl 14','tgl 14','Jan, Mei, Jul, Okt'],
+    ['IA','Code of Conduct Compliance','Indeks 4','Indeks 4','Jul'],
+    ['IA','Closed Internal Audit PICA','Indeks 3','Indeks 3','Agu'],
+    ['HC','People Bench Strength: cadre availability, IDP, Fire Test Scenario, Mentoring','100% · 1 IDP · 100% · 100%','100% · 1 IDP · 100% · 100%','Des'],
+    ['HC','Employee Engagement: FGD & AP completion','100%','100%','Nov'],
+    ['IT','IT Security Index','3,00','3,00','Des'],
+    ['Corsec','Digital Marketing Activity Reporting','100%','100%','Jan–Des'],
+    ['Corsec','CSR Implementation','3','3','Mei, Nov, Des'],
+    ['Corsec','Issue Disclosure (zero negative issue)','100%','100%','Jan–Des']
+  ]
+};
+/* [grup, kegiatan, mulai, selesai, agenda kunci, terkonfirmasi di dokumen] — tanggal null = TBC */
+var TIMELINE = [
+  ['Arahan Holding & Subholding','Executive Briefing Triputra & Shareholder Message 2027','2026-09-09','2026-09-09',0,1],
+  ['Arahan Holding & Subholding','Daya Group Executive Briefing & President Letter 2027','2026-09-28','2026-09-28',0,1],
+  ['Arahan Holding & Subholding','Strategic Session Subco','2026-09-28','2026-09-28',0,0],
+  ['Arahan Holding & Subholding','Executive Workshop','2026-09-29','2026-10-09',0,0],
+  ['Arahan Holding & Subholding','Cascading KPI (Template-Mapping KPI) & penjelasan','2026-09-30','2026-09-30',0,0],
+  ['Arahan Holding & Subholding','Pengumpulan data dari HO dan cabang','2026-10-05','2026-10-05',0,0],
+  ['Arahan Holding & Subholding','CEO Message','2026-10-16','2026-10-16',0,0],
+  ['OYP & AP Head Office','Master Budget','2026-09-28','2026-10-30',0,0],
+  ['OYP & AP Head Office','Pembuatan Division KPI · Review 5YP & OYP','2026-09-30','2026-10-09',0,0],
+  ['OYP & AP Head Office','Pembuatan AP Head Office','2026-09-30','2026-10-09',0,0],
+  ['OYP & AP Head Office','Presentasi OYP & AP HO','2026-10-09','2026-10-09',1,0],
+  ['OYP & AP Head Office','Revisi OYP & AP HO','2026-10-12','2026-10-12',0,0],
+  ['OYP & AP Head Office','Cascading KPI OYP & AP HO','2026-10-12','2026-10-15',0,0],
+  ['AP Cabang','Pembuatan AP cabang','2026-10-05','2026-10-30',0,0],
+  ['AP Cabang','Presentasi AP Review DTC & DTB','2026-11-03','2026-11-03',1,0],
+  ['AP Cabang','Presentasi AP Review DDG, DDM & DDL','2026-11-04','2026-11-04',1,0],
+  ['AP Cabang','Konsolidasi AP cabang','2026-11-05','2026-11-06',0,0],
+  ['Penutupan','Planning Cycle Event','2026-11-13','2026-11-13',1,0],
+  ['Penutupan','Revise KPI',null,null,0,0],
+  ['Penutupan','PA & CAT',null,null,0,0]
+].map(function (r, i) { return {id:i + 1, grp:r[0], name:r[1], start:r[2], end:r[3] || r[2], key:!!r[4], doc:!!r[5]}; });
+
+/* =================== RENDER =================== */
+(function () {
+  var MONTHS = ['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'];
+  var DAYS = ['Min','Sen','Sel','Rab','Kam','Jum','Sab'];
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); };
+  var idn = function (v) { return String(v).replace('.', ','); };
+
+  /* tanggal sebagai hari UTC agar selisih hari tidak terpengaruh zona waktu perangkat */
+  var dnum = function (d) { var p = d.split('-'); return Date.UTC(+p[0], p[1] - 1, +p[2]) / 864e5; };
+  var today = (function () {
+    try { return new Intl.DateTimeFormat('en-CA', {timeZone:'Asia/Jakarta', year:'numeric', month:'2-digit', day:'2-digit'}).format(new Date()); }
+    catch (e) { var n = new Date(); return n.getFullYear() + '-' + ('0' + (n.getMonth() + 1)).slice(-2) + '-' + ('0' + n.getDate()).slice(-2); }
+  })();
+  var T = dnum(today);
+  var daysUntil = function (d) { return dnum(d) - T; };
+  var hLabel = function (d) { var n = daysUntil(d); return n === 0 ? 'Hari ini' : n === 1 ? 'Besok' : n > 0 ? 'H-' + n : 'Berjalan'; };
+  var fmtDate = function (d) { if (!d) return 'TBC'; var p = d.split('-'); return +p[2] + ' ' + MONTHS[p[1] - 1]; };
+  var fmtDay = function (d) { if (!d) return 'TBC'; return DAYS[new Date(dnum(d) * 864e5).getUTCDay()] + ', ' + fmtDate(d); };
+  var fmtNum = function (n) { return n % 1 === 0 ? String(n) : n.toFixed(2).replace('.', ','); };
+  var range = function (r, f) { return (f || fmtDate)(r.start) + (r.end !== r.start ? ' – ' + fmtDate(r.end) : ''); };
+
+  /* tema manual (opsional) */
+  var root = document.documentElement, tb = $('themebtn');
+  try { var saved = localStorage.getItem('pc2027-theme'); if (saved) root.dataset.theme = saved; } catch (e) {}
+  tb.addEventListener('click', function () {
+    var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    root.dataset.theme = dark ? 'light' : 'dark';
+    try { localStorage.setItem('pc2027-theme', root.dataset.theme); } catch (e) {}
+  });
+
+  /* hitung mundur */
+  var ev = daysUntil(EVENT_DATE);
+  $('ev-label').textContent = 'Planning Cycle Event · ' + fmtDate(EVENT_DATE);
+  $('ev-count').textContent = ev > 0 ? ev + ' hari lagi' : ev === 0 ? 'Hari ini' : 'Sudah berlangsung';
+
+  /* agenda bar */
+  var dated = TIMELINE.filter(function (r) { return r.start; });
+  var next = dated.filter(function (r) { return r.start >= today; })
+    .sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : (b.key - a.key) || (a.id - b.id); })[0];
+  var ongoing = dated.filter(function (r) { return r.start < today && r.end >= today; })
+    .sort(function (a, b) { return a.end < b.end ? -1 : a.end > b.end ? 1 : a.id - b.id; });
+  if (next || ongoing.length) {
+    var h = '';
+    if (next) h += '<span class="ab-h ' + (daysUntil(next.start) <= 3 ? 'soon' : '') + '">' + hLabel(next.start) + '</span>'
+      + '<span class="ab-t"><span class="ab-l">Agenda terdekat</span><strong>' + esc(next.name) + '</strong><span class="num">' + range(next, fmtDay) + '</span></span>';
+    if (ongoing.length) h += '<span class="ab-t ab-on"><span class="ab-l">Sedang berjalan</span><span>' + esc(ongoing[0].name)
+      + ' <span class="num dim">s.d. ' + fmtDate(ongoing[0].end) + '</span>' + (ongoing.length > 1 ? ' <span class="dim">+' + (ongoing.length - 1) + ' lainnya</span>' : '') + '</span></span>';
+    h += '<a class="ab-cal" href="#leader">Tambah ke kalender</a>';
+    $('agendabar-in').innerHTML = h; $('agendabar').hidden = false;
+  }
+
+  /* agenda 14 hari */
+  var soon = dated.filter(function (r) { return r.end >= today && daysUntil(r.start) <= 14; })
+    .sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : a.id - b.id; });
+  $('soonlist').innerHTML = soon.length ? soon.map(function (r) {
+    return '<li class="' + (r.key ? 'key' : '') + '"><span class="h num ' + (daysUntil(r.start) <= 3 ? 'soon' : '') + '">' + hLabel(r.start) + '</span>'
+      + '<span><strong>' + esc(r.name) + '</strong><span class="muted small num">' + range(r, fmtDay) + ' · ' + esc(r.grp) + (r.key ? ' · agenda kunci' : '') + '</span></span></li>';
+  }).join('') : '<li class="none muted">Tidak ada agenda dalam 14 hari ke depan.</li>';
+
+  var page = location.href.split('#')[0];
+  var wa = '*Planning Cycle Target 2027 · Agenda 14 hari ke depan*\n';
+  soon.forEach(function (r) { wa += '• ' + range(r, fmtDay) + ' — ' + r.name + (r.key ? ' ⭐' : '') + ' (' + hLabel(r.start) + ')\n'; });
+  if (!soon.length) wa += 'Tidak ada agenda dalam 14 hari ke depan.\n';
+  $('wa').href = 'https://wa.me/?text=' + encodeURIComponent(wa + '\nDashboard & timeline lengkap: ' + page);
+
+  /* kalender .ics (RFC 5545), dibuat di browser */
+  $('ics').addEventListener('click', function () {
+    var ical = function (s) { return s.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n'); };
+    var ymd = function (n) { return new Date(n * 864e5).toISOString().slice(0, 10).replace(/-/g, ''); };
+    var stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '');
+    var L = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Daya Group//Planning Cycle 2027//ID','CALSCALE:GREGORIAN','METHOD:PUBLISH','X-WR-CALNAME:Planning Cycle 2027','X-WR-TIMEZONE:Asia/Jakarta'];
+    dated.forEach(function (r) {
+      L.push('BEGIN:VEVENT', 'UID:pc2027-timeline-' + r.id + '@' + (location.hostname || 'pc2027'), 'DTSTAMP:' + stamp,
+        'DTSTART;VALUE=DATE:' + ymd(dnum(r.start)), 'DTEND;VALUE=DATE:' + ymd(dnum(r.end) + 1),
+        'SUMMARY:' + ical((r.key ? '★ ' : '') + 'PC 2027 · ' + r.name),
+        'DESCRIPTION:' + ical(r.grp + (r.key ? ' · agenda kunci' : '') + (r.doc ? '' : ' · tanggal draft, dapat berubah') + '\nDashboard: ' + page),
+        'URL:' + page, 'TRANSP:TRANSPARENT',
+        'BEGIN:VALARM','ACTION:DISPLAY','TRIGGER:-P1D','DESCRIPTION:' + ical('Besok: ' + r.name),'END:VALARM');
+      if (r.key) L.push('BEGIN:VALARM','ACTION:DISPLAY','TRIGGER:-P3D','DESCRIPTION:' + ical('3 hari lagi: ' + r.name),'END:VALARM');
+      L.push('END:VEVENT');
+    });
+    L.push('END:VCALENDAR');
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([L.join('\r\n') + '\r\n'], {type:'text/calendar;charset=utf-8'}));
+    a.download = 'planning-cycle-2027.ics';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+  });
+
+  /* ---- grafik SVG (port dari index.php) ---- */
+  var r2 = function (n) { return Math.round(n * 100) / 100; };
+  function gauge(out, tgt, max, color, label) {
+    var cx = 150, cy = 145, r = 115;
+    var pt = function (v, rr) { var a = Math.PI * (1 - v / max); return [r2(cx + rr * Math.cos(a)), r2(cy - rr * Math.sin(a))]; };
+    var arc = function (v0, v1, rr) { var p = pt(v0, rr), q = pt(v1, rr); return 'M' + p[0] + ' ' + p[1] + ' A' + rr + ' ' + rr + ' 0 0 1 ' + q[0] + ' ' + q[1]; };
+    var s = '<svg class="gauge" viewBox="0 0 300 165" role="img" aria-label="' + esc(label) + '">'
+      + '<path d="' + arc(0, max, r) + '" fill="none" stroke="var(--chip)" stroke-width="18"/>'
+      + '<path d="' + arc(0, out, r) + '" fill="none" stroke="var(--muted)" stroke-opacity=".45" stroke-width="18"/>'
+      + '<path d="' + arc(out, tgt, r) + '" fill="none" stroke="' + color + '" stroke-width="18"/>';
+    for (var v = 0; v <= max; v += 2) {
+      var a = pt(v, r - 14), b = pt(v, r - 22), t = pt(v, r - 36);
+      s += '<line x1="' + a[0] + '" y1="' + a[1] + '" x2="' + b[0] + '" y2="' + b[1] + '" stroke="var(--muted)"/>'
+        + '<text x="' + t[0] + '" y="' + (t[1] + 4) + '" text-anchor="middle">' + v + '%</text>';
+    }
+    var n = pt(tgt, r - 6);
+    return s + '<line x1="' + cx + '" y1="' + cy + '" x2="' + n[0] + '" y2="' + n[1] + '" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/><circle cx="' + cx + '" cy="' + cy + '" r="6" fill="var(--ink)"/></svg>';
+  }
+  function bars(d) {
+    var W = 360, H = 200, L = 34, R = 8, Tp = 14, B = 26, min = -30, max = 50;
+    var y = function (v) { return r2(Tp + (max - v) / (max - min) * (H - Tp - B)); };
+    var bw = (W - L - R) / d.length;
+    var s = '<svg viewBox="0 0 360 200" role="img" aria-label="Pertumbuhan penjualan mobil penumpang 2026, persen YoY">';
+    [-20, 0, 20, 40].forEach(function (v) {
+      s += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + y(v) + '" y2="' + y(v) + '" stroke="' + (v === 0 ? 'var(--muted)' : 'var(--line)') + '"/>'
+        + '<text x="' + (L - 6) + '" y="' + (y(v) + 4) + '" text-anchor="end">' + v + '</text>';
+    });
+    d.forEach(function (p, i) {
+      var v = p[1], x = r2(L + i * bw + bw * .18), w = r2(bw * .64), top = y(Math.max(v, 0)), h = Math.abs(y(v) - y(0));
+      s += '<rect x="' + x + '" y="' + top + '" width="' + w + '" height="' + h + '" rx="2" fill="' + (v < 0 ? 'var(--bad)' : 'var(--accent)') + '"><title>' + p[0] + ': ' + idn(v) + '%</title></rect>'
+        + '<text class="lbl" x="' + (x + w / 2) + '" y="' + (v < 0 ? y(v) + 13 : top - 4) + '" text-anchor="middle">' + idn(v) + '</text>'
+        + '<text x="' + (x + w / 2) + '" y="' + (H - 8) + '" text-anchor="middle">' + p[0] + '</text>';
+    });
+    return s + '</svg>';
+  }
+  function line(d) {
+    var W = 360, H = 200, L = 34, R = 14, Tp = 18, B = 26, min = 14, max = 25, n = d.length;
+    var x = function (i) { return r2(L + i * (W - L - R) / (n - 1)); };
+    var y = function (v) { return r2(Tp + (max - v) / (max - min) * (H - Tp - B)); };
+    var s = '<svg viewBox="0 0 360 200" role="img" aria-label="Porsi kelas menengah Indonesia 2016–2025">';
+    [15, 20, 25].forEach(function (t) {
+      s += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + y(t) + '" y2="' + y(t) + '" stroke="var(--line)"/>'
+        + '<text x="' + (L - 6) + '" y="' + (y(t) + 4) + '" text-anchor="end">' + t + '%</text>';
+    });
+    var pts = d.map(function (p, i) { return x(i) + ',' + y(p[1]); }).join(' ');
+    s += '<polygon points="' + x(0) + ',' + y(min) + ' ' + pts + ' ' + x(n - 1) + ',' + y(min) + '" fill="var(--accent)" fill-opacity=".1"/>'
+      + '<polyline points="' + pts + '" fill="none" stroke="var(--accent)" stroke-width="2.5"/>';
+    [0, 2, n - 1].forEach(function (i) {
+      s += '<circle cx="' + x(i) + '" cy="' + y(d[i][1]) + '" r="4" fill="var(--accent)"/>'
+        + '<text class="lbl" x="' + x(i) + '" y="' + (y(d[i][1]) - 9) + '" text-anchor="middle">' + idn(d[i][1]) + '%</text>';
+    });
+    d.forEach(function (p, i) { if (i % 3 === 0 || i === n - 1) s += '<text x="' + x(i) + '" y="' + (H - 8) + '" text-anchor="middle">' + p[0] + '</text>'; });
+    return s + '</svg>';
+  }
+
+  /* target */
+  $('targets').insertAdjacentHTML('afterbegin', CONTENT.targets.map(function (t) {
+    return '<article class="tcard ' + t.cls + '"><span class="brand">' + esc(t.brand) + '</span>'
+      + gauge(t.outlook, t.target, 14, t.cls === 'ty' ? 'var(--toyota)' : 'var(--daihatsu)', 'Outlook ' + fmtNum(t.outlook) + '%, target ' + fmtNum(t.target) + '%')
+      + '<div class="tline"><div><span class="v num">' + fmtNum(t.outlook) + '%</span><span class="l">Outlook 2026</span></div>'
+      + '<div><span class="v num tgt">≥ ' + t.target.toFixed(1).replace('.', ',') + '%</span><span class="l">Target 2027</span></div>'
+      + '<div><span class="v num">' + esc(t.gap) + '</span><span class="l">poin harus dikejar</span></div></div>'
+      + '<p class="note">Kontribusi terhadap penjualan wilayah <strong>' + esc(t.area) + '</strong>. Cabang: ' + esc(t.branches) + '.</p></article>';
+  }).join(''));
+
+  /* pasar */
+  $('chart-sales').innerHTML = bars(CONTENT.carSalesYoy);
+  $('chart-mc').innerHTML = line(CONTENT.middleClass);
+  $('macro').innerHTML = CONTENT.macro.map(function (m) { return '<div><b class="num">' + esc(m[0]) + '</b><span>' + esc(m[1]) + '</span></div>'; }).join('');
+
+  /* timeline (Sep–Des 2026) */
+  var t0 = dnum('2026-09-01'), t1 = dnum('2026-12-31') + 1;
+  var pct = function (d) { return Math.max(0, Math.min(100, (dnum(d) - t0) / (t1 - t0) * 100)); };
+  var lastGrp = null, rows = '';
+  TIMELINE.forEach(function (r) {
+    if (r.grp !== lastGrp) { lastGrp = r.grp; rows += '<tr class="grp"><td colspan="4">' + esc(r.grp) + '</td></tr>'; }
+    var st, cls = '';
+    if (!r.start) st = 'TBC';
+    else if (r.end < today) { st = 'Lewat'; cls = 'past'; }
+    else if (r.start <= today) { st = 'Berjalan'; cls = 'now'; }
+    else st = 'Terjadwal';
+    var bar = '';
+    if (r.start) {
+      var a = pct(r.start), b = pct(r.end) + 100 / 122;
+      bar = '<span class="bar ' + (cls === 'past' ? 'done' : r.key ? 'key' : '') + '" style="left:' + r2(a) + '%;width:' + r2(Math.max(b - a, 1)) + '%"></span>';
+    }
+    rows += '<tr><td>' + esc(r.name) + '</td><td class="num nowrap">' + (r.start ? range(r) : 'TBC') + (r.doc ? ' <span class="state">dok</span>' : '') + '</td>'
+      + '<td><span class="state ' + cls + '">' + st + '</span></td>'
+      + '<td class="bar-cell"><div class="track">' + bar + '<span class="today" style="left:' + r2(pct(today)) + '%" title="Hari ini"></span></div></td></tr>';
+  });
+  $('tl-body').innerHTML = rows;
+
+  /* KPI mandatory */
+  $('kpi-body').innerHTML = CONTENT.kpiMandatory.map(function (k) {
+    return '<tr><td class="fn">' + esc(k[0]) + '</td><td>' + esc(k[1]) + '</td><td class="mono">' + esc(k[2]) + '</td><td class="mono">' + esc(k[3]) + '</td><td class="mono">' + esc(k[4]) + '</td></tr>';
+  }).join('');
+})();
+</script>
+</body>
+</html>
