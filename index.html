@@ -152,6 +152,14 @@ table.tl{min-width:760px}
 .cstep{background:var(--surface);padding:16px;display:grid;gap:6px}
 .cstep .f{font:500 .7rem var(--mono);color:var(--accent);letter-spacing:.08em}
 .cstep .who{font-size:.8rem;color:var(--muted)}
+
+/* materi */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px}
+.doc{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;display:grid;gap:10px;align-content:start;box-shadow:inset 0 3px 0 var(--accent)}
+.doc .org{font:600 .72rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.doc .when{font:500 .78rem var(--mono);color:var(--muted)}
+.doc ul{margin:0;padding-left:18px;font-size:.86rem;color:var(--muted);display:grid;gap:2px}
+.doc .btn{justify-self:start;margin-top:4px}
 </style>
 </head>
 <body>
@@ -160,6 +168,7 @@ table.tl{min-width:760px}
 <nav class="nav" aria-label="Navigasi bagian"><div class="wrap">
   <b>PC 2027</b>
   <a href="#leader">Agenda</a>
+  <a href="#materi">Materi</a>
   <a href="#target">Target</a>
   <a href="#pasar">Pasar</a>
   <a href="#timeline">Timeline</a>
@@ -191,6 +200,27 @@ table.tl{min-width:760px}
       <p class="note">Buka file .ics di Outlook, Google Calendar (<em>Settings → Import</em>), atau iPhone.
         Setiap agenda membawa pengingat H-1; agenda kunci (presentasi &amp; Planning Cycle Event) juga H-3.</p>
     </div>
+  </div>
+</section>
+
+<section id="materi">
+  <div class="sec-head"><p class="eyebrow">Materi unduhan · untuk peserta Planning Cycle</p><h2>Pelajari arahan langsung dari sumbernya</h2>
+    <p class="muted">Materi tersimpan di Google Drive. Buka foldernya, pilih file, lalu klik <em>Download</em>.</p></div>
+  <div class="docs">
+    <article class="doc">
+      <span class="org">Triputra Group</span>
+      <h3>Executive Briefing Triputra Group</h3>
+      <span class="when">9 Sep 2026</span>
+      <ul><li>Shareholder Message 2027: <em>Agile Execution, Resilient Foundation</em></li><li>Realita pasar &amp; asumsi makro 2027</li><li>Key Budget Guidance 2027</li></ul>
+      <a class="btn accent" href="https://drive.google.com/drive/folders/1E1URtkS4jxX8mD8adiSLdNA1Rov_Hm2u?usp=sharing" target="_blank" rel="noopener">Buka folder materi ↗</a>
+    </article>
+    <article class="doc">
+      <span class="org">Daya Group</span>
+      <h3>Executive Briefing Daya Group</h3>
+      <span class="when">28 Sep 2026</span>
+      <ul><li>President Letter 2027: <em>Evolving Together Toward Greatness</em></li><li>Target sales contribution 2027</li><li>KPI Mandatory 2027 untuk DAS &amp; DAWi</li></ul>
+      <a class="btn accent" href="https://drive.google.com/drive/folders/10M-PI4E-QRDEt6ixaIYhqZpVhJsV-Y8F?usp=sharing" target="_blank" rel="noopener">Buka folder materi ↗</a>
+    </article>
   </div>
 </section>
 
